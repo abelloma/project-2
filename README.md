@@ -43,9 +43,12 @@ https://eric.clst.org/tech/usgeojson/
 
 ## INSPIRATION FROM PREVIOUS HOMEWORKS
 1. Some drop downs or options to select views like Web Design
-![sample1](web-design homework sample.PNG)
-2. An interactive chart comparing several values to the number of breweries like D3 homework
-![sample2](D3-Homework transitioning circles.PNG)
-3. A drop down to select a state and list facts like the web design homework
-![sample3](web-design homework sample.PNG)
+![sample1](sample2.PNG)
+2. A drop down to select a state and list facts like the web design homework
+![sample3](sample1.PNG)
+3. An interactive chart comparing several values to the number of breweries like D3 homework
+![sample2](sample2.PNG)
+4. Chorolpleth map
+![sample4](sample4.PNG)
+
 4. Found this link with wavy circle gauges - http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6
