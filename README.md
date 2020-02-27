@@ -51,4 +51,7 @@ https://eric.clst.org/tech/usgeojson/
 4. Chorolpleth map
 ![sample4](sample4.PNG)
 
-4. Found this link with wavy circle gauges - http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6
+5. Found this link with wavy circle gauges - http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6
+
+## SKETCH OF Design
+![sketch](sketch.PNG)
