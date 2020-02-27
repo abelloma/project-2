@@ -43,11 +43,11 @@ https://eric.clst.org/tech/usgeojson/
 
 ## INSPIRATION FROM PREVIOUS HOMEWORKS
 1. Some drop downs or options to select views like Web Design
-![sample1](sample2.PNG)
+![sample2](sample2.PNG)
 2. A drop down to select a state and list facts like the web design homework
-![sample3](sample1.PNG)
+![sample1](sample1.PNG)
 3. An interactive chart comparing several values to the number of breweries like D3 homework
-![sample1](sample3.PNG)
+![sample3](sample3.PNG)
 4. Chorolpleth map
 ![sample4](sample4.PNG)
 
