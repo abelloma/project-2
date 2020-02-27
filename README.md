@@ -43,9 +43,9 @@ https://eric.clst.org/tech/usgeojson/
 
 ## INSPIRATION FROM PREVIOUS HOMEWORKS
 1. Some drop downs or options to select views like Web Design
-![GitHub Logo](web-design homework sample.PNG)
+![sample1](web-design homework sample.PNG)
 2. An interactive chart comparing several values to the number of breweries like D3 homework
-![GitHub Logo](D3-Homework transitioning circles.PNG)
+![sample2](D3-Homework transitioning circles.PNG)
 3. A drop down to select a state and list facts like the web design homework
-![GitHub Logo](web-design homework sample.PNG)
+![sample3](web-design homework sample.PNG)
 4. Found this link with wavy circle gauges - http://bl.ocks.org/brattonc/5e5ce9beee483220e2f6
