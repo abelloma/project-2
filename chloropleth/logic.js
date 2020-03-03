@@ -13,7 +13,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(myMap);
 
 // Load in GeoJson data
-var geoData = "statesOutlinesPlus.json";
+var geoData = "/project-2/chloropleth/statesOutlinesPlus.json";
 
 // Grab the data with d3
 d3.json(geoData, function(data) {
