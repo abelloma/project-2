@@ -21,7 +21,7 @@ d3.json(geoData, function(data) {
   // Create a new choropleth layer
   choroplethLayer = L.choropleth(data, {
     valueProperty: 'wineries',
-    scale: ['white', 'purple', 'darkred', 'maroon'],
+    scale: ['cornsilk', "lemonchiffon", 'mistyrose','lightpink', 'darkred'],
     steps: 10,
     mode: 'q',
     style: {

@@ -1,12 +1,12 @@
 
 var svgWidth = 800;
-var svgHeight = 400;
+var svgHeight = 445;
 
 var margin = {
-  top: 20,
+  top: 30,
   right: 40,
-  bottom: 80,
-  left: 100
+  bottom: 70,
+  left: 60
 };
 
 var width = svgWidth - margin.left - margin.right;
@@ -120,7 +120,7 @@ d3.csv("combined_data.csv").then(function(beerData, err) {
 
   // Create y scale function
   var yLinearScale = d3.scaleLinear()
-    .domain([0, d3.max(beerData, d => d.wineries)])
+    .domain([-100, d3.max(beerData, d => d.wineries +100)])
     .range([height, 0]);
 
   // Create initial axis functions
