@@ -18,6 +18,8 @@ body {
   position: relative;
 } */
 
+h1 {font-family: bubblegum-sans, sans-serif};
+
 .container *::before,
 .container *::after {
   content: '';
