@@ -1,11 +1,11 @@
 body {
-    padding: 10;
-    margin: 20;
+    padding: 0;
+    margin: 0;
   }
   #map,
   body,
   html {
-    height: 95%;
+    height: 100%;
   }
   .leaflet-popup-content {
     text-align: center;

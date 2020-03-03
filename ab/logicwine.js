@@ -20,8 +20,8 @@ d3.json(geoData, function(data) {
 
   // Create a new choropleth layer
   choroplethLayer = L.choropleth(data, {
-    valueProperty: 'brewery_count',
-    scale: ['lightyellow', 'gold', 'goldenrod', 'darkgoldenrod', 'sienna', 'saddlebrown'],
+    valueProperty: 'wineries',
+    scale: ['white', 'purple', 'darkred', 'maroon'],
     steps: 10,
     mode: 'q',
     style: {
@@ -30,7 +30,7 @@ d3.json(geoData, function(data) {
       fillOpacity: 0.8
     },
     onEachFeature: function (feature, layer) {
-      layer.bindPopup('State: ' + feature.properties.NAME+ "<br> Breweries: " + feature.properties.brewery_count)
+      layer.bindPopup('State: ' + feature.properties.NAME+ "<br> Wineries: " + feature.properties.wineries)
     }
   }).addTo(myMap)
 
@@ -43,7 +43,7 @@ d3.json(geoData, function(data) {
     var labels = []
 
     // Add min & max
-    div.innerHTML = '<h2>Number of Breweries</h2> <div class="labels"><div class="min">' + limits[0] + 
+    div.innerHTML = '<h2>Number of Wineries</h2> <div class="labels"><div class="min">' + limits[0] + 
     '</div> <div class="max">' + limits[limits.length - 1] + '</div></div>'
 
     limits.forEach(function (limit, index) {

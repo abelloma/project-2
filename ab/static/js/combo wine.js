@@ -1,6 +1,4 @@
 
-
-// start here for previous working version
 var svgWidth = 800;
 var svgHeight = 400;
 
@@ -78,9 +76,9 @@ function updateToolTip(chosenXAxis, circlesGroup) {
   if (chosenXAxis === "income") {
     var label = "Income:";
   }
-  else if (chosenXAxis === "wineries") {
-    var label = "Wineries:";
-  }
+  // else if (chosenXAxis === "wineries") {
+  //   var label = "Wineries:";
+  // }
   else {
     var label = "Population:";
   }
@@ -89,7 +87,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
     .attr("class", "d3-tip")
     .offset([80, -60])
     .html(function(d) {
-      return (`${d.state} <br> Breweries: ${d.brewery_count}<br>${label} ${d[chosenXAxis]}`);
+      return (`${d.state} <br> Wineries: ${d.wineries}<br>${label} ${d[chosenXAxis]}`);
     });
 
   circlesGroup.call(toolTip);
@@ -114,7 +112,7 @@ d3.csv("combined_data.csv").then(function(beerData, err) {
     data.income = +data.income;
     data.wineries = +data.wineries;
     data.population = +data.population;
-    data.brewery_count = +data.brewery_count;
+    data.wineries = +data.wineries;
   });
 
   // xLinearScale function above csv import
@@ -122,7 +120,7 @@ d3.csv("combined_data.csv").then(function(beerData, err) {
 
   // Create y scale function
   var yLinearScale = d3.scaleLinear()
-    .domain([0, d3.max(beerData, d => d.brewery_count)])
+    .domain([0, d3.max(beerData, d => d.wineries)])
     .range([height, 0]);
 
   // Create initial axis functions
@@ -147,7 +145,7 @@ d3.csv("combined_data.csv").then(function(beerData, err) {
   // append initial circles
   var circlesGroup = circles.append("circle")
     .attr("cx", d => xLinearScale(d[chosenXAxis]))
-    .attr("cy", d => yLinearScale(d.brewery_count))
+    .attr("cy", d => yLinearScale(d.wineries))
     .attr("r", 20)
     .classed("stateCircle", true)
     .attr("opacity", ".8");
@@ -156,7 +154,7 @@ d3.csv("combined_data.csv").then(function(beerData, err) {
     .text(d => d.abbr)
     .style("font-size", "10px")
     .attr("x", d=>xLinearScale(d[chosenXAxis]))
-    .attr("y", d => yLinearScale(d.brewery_count))  
+    .attr("y", d => yLinearScale(d.wineries))  
     .classed("stateText", true)  
     .style("font-weight", "800")
 
@@ -192,7 +190,7 @@ d3.csv("combined_data.csv").then(function(beerData, err) {
     .attr("x", 0 - (height / 2))
     .attr("dy", "1em")
     .classed("active", true)
-    .text("Brewery Count by State");
+    .text("Winery Count by State");
 
   // updateToolTip function above csv import
   var circlesGroup = updateToolTip(chosenXAxis, circlesGroup);
@@ -253,9 +251,9 @@ d3.csv("combined_data.csv").then(function(beerData, err) {
           incomeLabel
             .classed("active", false)
             .classed("inactive", true);
-        //   wineryLabel
-        //     .classed("active", true)
-        //     .classed("inactive", false);
+          // wineryLabel
+          //   .classed("active", true)
+          //   .classed("inactive", false);
         }
       }
     });
@@ -288,14 +286,14 @@ function buildMetadata(state) {
           case "income":
             chart.append("p").text(`Avg Income : $${value}`);
             break;
-          case "brewery_count":
-            chart.append("p").text(`Breweries : ${value}`);
+          case "wineries":
+            chart.append("p").text(`Wineries : ${value}`);
             break;
           case "population":
             chart.append("p").text(`Population : ${value}`);
             break;
-          case "pct_brewery":
-            chart.append("p").text(`% of Total Breweries in US: ${parseFloat(value).toFixed(2)}%`);
+          case "pct_winery":
+            chart.append("p").text(`% of Total Wineries in US: ${parseFloat(value).toFixed(2)}%`);
             break;
         }
       // chart.append("p").text(`${key} : ${value}`);

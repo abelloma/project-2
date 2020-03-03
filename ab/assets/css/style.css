@@ -29,3 +29,7 @@ body {
   margin: 0;
   font-size: 16px;
 }
+
+.jumbotron {
+  background-image: "bubbles.jpg" center center / cover no-repeat;
+}

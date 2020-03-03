@@ -4,13 +4,11 @@ body {
   display: flex;
   justify-content: center;
   background: linear-gradient(
-      gold 90px,
+      purple 90px,
       rgb(236, 229, 229) 500px
   );
   /* overflow: hidden; */
 }
-
-
 
 /* .container {
   width: 700px;

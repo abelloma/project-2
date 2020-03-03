@@ -5,27 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>beer, Beer, BEER</title>
+  <title>wine, Wine, WINE</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="d3Style.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="d3Style-wine.css">
+  <link rel="stylesheet" type="text/css" href="style-wine.css">
 </head>
 
 <body>
-
   <!-- <canvas id="canvas-image-blending"></canvas> -->
   <div class="container">
     <div class="row"> <!-- header -->
       <div class="col-md-12 jumbotron text-center"  >
-        <h1>Brewery Information by State</h1>
+        <h1>Winery Information by State</h1>
         <p>Use the interactive charts below to explore the dataset</p>
         <a class="btn btn-warning" href="index.html" role="button">Beer</a>
         <a class="btn btn-danger" href="wine.html" role="button">Wine</a>
-        <a class="btn btn-success" target="_blank" href="beermap.html" role="button">MAP</a>
+        <a class="btn btn-success" target="_blank" href="winemap.html" role="button">MAP</a>
       </div>
       
     </div>
-    <div class="row">  <!-- beer-->
+    <!-- <div class="row">  
       
       <div class="col-md-1" >
         <div class="keg">
@@ -37,7 +36,7 @@
         </div>
       </div>
       <div class="col-md-11"> <p></p></div>
-    </div>
+    </div> -->
   
     <div class="row">  <!-- charts -->
       <div class="col-md-9">
@@ -48,7 +47,7 @@
           <h5>State:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <div class="panel panel-warning">
+        <div class="panel panel-danger">
           <div class="panel-heading">
             <h3 class="panel-title">State Info</h3>
           </div>
@@ -71,7 +70,7 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-  <script src="./static/js/combo.js"></script>
+  <script src="./static/js/combo wine.js"></script>
   <!-- <script src="./static/js/bar.js"></script> -->
 
 
