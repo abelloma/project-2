@@ -16,7 +16,7 @@ body {
   position: relative;
 } */
 
-h1 {font-family: bubblegum-sans, sans-serif};
+h1 {font-family: euphoria-script, sans-serif;};
 
 .container *::before,
 .container *::after {
