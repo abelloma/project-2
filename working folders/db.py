@@ -1,0 +1,1 @@
+csv-to-sqlite -f table.csv -o result.sqlite
