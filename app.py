@@ -1,6 +1,6 @@
 
 
-from flask import Flask, render_template, jsonify, after_this_request
+
 # from flask_pymongo import PyMongo
 import sqlalchemy
 import sqlite3
@@ -8,6 +8,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask_sqlalchemy import SQLAlchemy
+from flask import Flask, render_template, jsonify, after_this_request
 import pandas as pd
 import json
 
@@ -23,24 +24,22 @@ Base.prepare(db.engine, reflect=True)
 
 
 @app.route("/")
-def api_call():
-    print("index page")
+def home():
     return render_template('index.html')
 
-@app.route("/templates/wine.html", method =["POST"])
+@app.route("/wine")
 def wine():
-    print("wine page")
-    return render_template('/templates/wine.html')
+    return render_template('/wine.html')
 
-@app.route("/winemap/")
+@app.route("/winemap")
 def winemap():
 
-    return render_template('winemap.html')
+    return render_template('/winemap.html')
 
-@app.route("/templates/beermap")
+@app.route("/beermap")
 def beermap():
 
-    return render_template('beermap.html')    
+    return render_template('/beermap.html')    
 
 @app.route("/API_endpoint", methods=['GET'])
 def index():

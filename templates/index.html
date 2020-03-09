@@ -20,9 +20,10 @@
       <div class="col-md-12 jumbotron text-center"  >
         <h1>Brewery Information by State</h1>
         <p>Use the interactive charts below to explore the dataset</p>
-        <a class="btn btn-warning" href="/index.html" role="button">Beer</a>
-        <a class="btn btn-danger" href="/templates/wine.html" role="button">Wine</a>
-        <a class="btn btn-success" target="_blank" href="/beermap.html" role="button">MAP</a>
+        <a class="btn btn-warning" href="{{ url_for('home') }}" role="button">Beer</a>
+        <a class="btn btn-danger" href="{{ url_for('wine') }}" role="button">Wine</a>
+        <!-- <a class="btn btn-danger" href="/wine.html" role="button">Wine</a> -->
+        <a class="btn btn-success" target="_blank" href="{{ url_for('beermap')}}" role="button">MAP</a>
       </div>
       
     </div>
