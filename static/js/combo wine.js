@@ -106,6 +106,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
 // Retrieve data from the CSV file and execute everything below
 d3.csv("../static/data/combined_data.csv").then(function(beerData, err) {
   if (err) throw err;
+  console.log(beerData);
 
   // parse data
   beerData.forEach(function(data) {

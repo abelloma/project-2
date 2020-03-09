@@ -24,29 +24,34 @@ Base.prepare(db.engine, reflect=True)
 
 @app.route("/")
 def api_call():
-
+    print("index page")
     return render_template('index.html')
+
+@app.route("/templates/wine.html", method =["POST"])
+def wine():
+    print("wine page")
+    return render_template('/templates/wine.html')
+
+@app.route("/winemap/")
+def winemap():
+
+    return render_template('winemap.html')
+
+@app.route("/templates/beermap")
+def beermap():
+
+    return render_template('beermap.html')    
 
 @app.route("/API_endpoint", methods=['GET'])
 def index():
-    # singledocument = mongo.db.fruits_db.find({})
-    # states = []
-    # for x in singledocument:
-    #     data.append({'vendor' : x['vendor'], 'fruit' : x['fruit'], 'quantity' : x['quantity']})
 
-    # return jsonify(data)
-    conn = sqlite3.connect('db.sqlite')
+    data = [("index","state","income","abbr","brewery_count","population","wineries","pct_brewery""pct_winery","per_capita_beer","per_capita_wine","total_breweries","total_wineries")]
+    conn = sqlite3.connect('beer_db.sqlite')
 
     cursor = conn.execute('SELECT * FROM beer;')
-    data = cursor.fetchall()
+    data.append = cursor.fetchall()
     print(data)
-    # print (data( json_str = True ))
-    # row_json = json.dumps(data)
-    # print(row_json)
 
-    # for row in data:
-    #     print(row)
-    #     states.append(row)
 
     return jsonify(data)
 
